@@ -1,13 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <style name="Base.Theme.LAB_WEEK_04" parent="Theme.Material3.DayNight.NoActionBar" />
 
-    <style name="Theme.NavigationDrawer.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
+    <!-- Tema utama aplikasi -->
+    <style name="Theme.LABWEEK04" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/dark_brown</item>
+        <item name="colorPrimaryVariant">@color/light_brown</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/light_brown</item>
+        <item name="android:statusBarColor">@color/dark_brown</item>
     </style>
 
-    <style name="Theme.NavigationDrawer.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
-    <style name="Theme.NavigationDrawer.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
-
-    <style name="Theme.LAB_WEEK_04" parent="Base.Theme.LAB_WEEK_04"/>
 </resources>

@@ -1,7 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.LAB_WEEK_04" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+
+    <!-- Tema malam (dark mode) -->
+    <style name="Theme.LABWEEK04" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/dark_brown</item>
+        <item name="colorPrimaryVariant">@color/light_brown</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/light_brown</item>
+        <item name="android:statusBarColor">@color/black</item>
     </style>
+
 </resources>

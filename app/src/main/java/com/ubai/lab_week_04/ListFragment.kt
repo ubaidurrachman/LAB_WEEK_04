@@ -5,13 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.Navigation
-import androidx.navigation.fragment.FragmentNavigatorExtras
+import androidx.navigation.fragment.findNavController
 
 class ListFragment : Fragment() {
+
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
+        inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_list, container, false)
@@ -19,24 +18,11 @@ class ListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val coffeeList = listOf(
-            view.findViewById<View>(R.id.affogato),
-            view.findViewById(R.id.americano),
-            view.findViewById(R.id.latte)
-        )
-        coffeeList.forEach { coffee ->
-            val fragmentBundle = Bundle()
-            fragmentBundle.putInt(COFFEE_ID, coffee.id)
-            coffee.setOnClickListener(
-                Navigation.createNavigateOnClickListener(
-                    R.id.action_listFragment_to_detailFragment,
-                    fragmentBundle
-                )
-            )
-        }
-    }
 
-    companion object {
-        const val COFFEE_ID = "COFFEE_ID"
+        // contoh kalau item di-click → navigasi ke detail
+        view.findViewById<View>(R.id.affogato).setOnClickListener {
+            val bundle = Bundle().apply { putInt(DetailFragment.COFFEE_ID, R.id.affogato) }
+            findNavController().navigate(R.id.detailFragment, bundle)
+        }
     }
 }

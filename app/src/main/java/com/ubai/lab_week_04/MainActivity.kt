@@ -23,7 +23,11 @@ class MainActivity : AppCompatActivity() {
         val navController = navHostFragment.navController
 
         appBarConfiguration = AppBarConfiguration(
-            setOf(R.id.listFragment, R.id.favoritesFragment),
+            setOf(
+                R.id.listFragment,
+                R.id.favoritesFragment,
+                R.id.cafeFragment // <-- pastikan ini ada
+            ),
             findViewById(R.id.drawer_layout)
         )
 

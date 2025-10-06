@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- warna icon/text kalau aktif -->
     <item android:color="@color/white" android:state_checked="true"/>
+    <!-- warna icon/text kalau nonaktif -->
     <item android:color="@color/gray" android:state_checked="false"/>
 </selector>
