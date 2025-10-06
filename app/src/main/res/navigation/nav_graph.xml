@@ -22,5 +22,9 @@
         android:id="@+id/detailFragment"
         android:name="com.ubai.lab_week_04.DetailFragment"
         android:label="Detail" />
+    <fragment
+        android:id="@+id/cafeFragment2"
+        android:name="com.ubai.lab_week_04.CafeFragment"
+        android:label="CafeFragment" />
 
 </navigation>
